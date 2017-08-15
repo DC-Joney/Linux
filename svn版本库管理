@@ -1,0 +1,128 @@
+sudo apt-get install subversion 
+
+
+sudo mkdir -p /application/{svndata,svnpasswd}
+
+subserve：
+    -d 表示后台运行 
+    -r表示数据存放的目录
+    --list port 指定端口
+    --pid 指定pid存放路径
+#开启服务    
+subserve -d -r /application/svndata
+
+
+svnadmin:
+svnadmin help | svnadmin help create 
+    create 创建
+    
+#创建版本库    
+svnadmin create /application/svndata/scdoc （--fs-type fsfs|bdb）默认为fsfs
+
+sudo apt-get install tree
+tree /application/svndata
+
+
+#文件配置目录 /application/svndata/scdoc/conf
+
+   
+
+##修改文件要先备份  
+ sudo cp svnserve.conf  svnserve.conf.ori
+ 
+#匿名访问
+anon-access = none
+#权限写
+auth-access = write
+
+#密码存放
+password-db = /application/svnpasswd/passwd
+
+
+#权限数据库
+authz-db = /application/svnpasswd/authz
+
+
+#快速替换
+
+sed -i 's/# auth-access = write/auth-access=write/' svnserve.conf
+sed -i 's/# anon-access = read/aanon-access=none/' svnserve.conf
+sed -i 's%# passwd-db = passwd%passwd-db = /application/svnpasswd/passwd%' svnserve.conf
+sed -i 's%# authz-db = authz%authz-db = /application/svnpasswd/authz%' svnserve.conf
+
+#查看
+
+egrep "\-access|\-db =" svnserve.conf
+
+sudo cp authz passwd  ../../../svnpasswd/
+
+
+#svnpasswd/
+sudo chmod 700 *
+
+
+#添加帐号密码
+
+sudo gedit passwd
+
+admin = amdin 
+passwd = passwd
+
+
+
+#修改权限
+sudo gedit authz
+
+设置分组
+sagroup = admin,dcjoney
+
+#项目根路径 分配权限
+[sadoc:/]
+admin = rw
+dcjoney = r
+
+#设置组权限 前加@符号
+@sagroup = r
+
+#重启svn服务
+
+pkill svnserve
+
+svnserve -d -r /application/svndata
+
+#使用pid file
+
+kill -USR1 `cat /application/svndata/svn.pid`
+
+
+
+#客户端访问
+svn://ip/scdoc(项目名称)
+账号: 密码:
+
+linux下 svn的命令:
+
+svn:
+    ci 提交
+    co 检出
+    
+svn co svn://ip/scdoc --username :name --password :password
+    
+svn update co svn://ip/scdoc /svndata/ --username --password
+
+svn co file:///application/svndata/scdoc //本地访问
+
+
+#解决字符集
+
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=
+#locle 查看字符集
+
+
+#查看数据
+
+svn list|ls   svn://ip/scdoc
+
+#查看版本详细内容
+svn list|ls   svn://ip/scdoc --verbose

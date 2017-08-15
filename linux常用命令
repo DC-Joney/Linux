@@ -1,1 +1,32 @@
 netstat -lntup | grep 端口
+
+grep 
+
+lsof -i :端口
+
+
+diff file1 file2 比较文件
+
+#快速替换
+
+sed -i 's/# auth-access = write/auth-access = write/' svnserve.conf
+sed -i 's/# anon-access = read/aanon-access = none/' svnserve.conf
+sed -i 's%# passwd-db = passwd%passwd-db = /application/svnpasswd/passwd%' svnserve.conf
+sed -i 's%# authz-db = authz%authz-db = /application/svnpasswd/authz%' svnserve.conf
+
+#快速查看文件
+
+egrep "\-access|\-db =" svnserve.conf
+
+sudo chmod 700 *
+
+pkill 进程名称
+
+使用pid file的 kill -USR1 `cat /application/svndata/svn.pid`
+
+ifconfig :地址
+
+#解决字符集
+
+export LC_CTYPE=en_US.UTF-8
+
