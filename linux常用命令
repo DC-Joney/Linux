@@ -1,0 +1,1 @@
+netstat -lntup | grep 端口
