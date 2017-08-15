@@ -1,0 +1,50 @@
+sudo apt-get install git
+
+#全局添加 信息储存在~/.gitconfig下
+git config --global user.name "myName"
+git config --global user.email "myEmail"
+
+#局部添加 信息储存在Git项目所在目录
+$ git config user.name "your name"
+$ git config user.email "your_email"
+
+#本地创建ssh key（直接按回车表示不设密码）
+
+ssh-keygen -t rsa -C “your_email” 
+
+#打开id_rsa.pub，复制里面的key。里面的key是一对看不懂的字符数字组合，不用管它，直接复制放在github的setting选项中的SSH Key中
+
+#验证是否成功
+ssh -T git@github.com
+
+git pull 获取新版本
+
+git status
+
+git add .
+
+git commit -m "add new files"
+
+git remote add origin git@github.com:FranFan/php-demo.git
+
+git push -u origin master
+
+
+
+#git reomote用法
+
+git remote [-v | --verbose]
+   或：git remote add [-t <分支>] [-m <master>] [-f] [--tags|--no-tags] [--mirror=<fetch|push>] <名称> <url>
+   或：git remote rename <旧名称> <新名称>
+   或：git remote remove <名称>
+   或：git remote set-head <名称> (-a | --auto | -d | --delete |<分支>)
+   或：git remote [-v | --verbose] show [-n] <名称>
+   或：git remote prune [-n | --dry-run] <名称>
+   或：git remote [-v | --verbose] update [-p | --prune] [(<组> | <远程>)...]
+   或：git remote set-branches [--add] <名称> <分支>...
+   或：git remote set-url [--push] <名称> <新的地址> [<旧的地址>]
+   或：git remote set-url --add <名称> <新的地址>
+   或：git remote set-url --delete <名称> <地址>
+    -v, --verbose         冗长输出；必须置于子命令之前
+
+
