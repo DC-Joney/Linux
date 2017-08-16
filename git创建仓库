@@ -29,7 +29,8 @@ git remote add origin git@github.com:FranFan/php-demo.git
 
 git push -u origin master
 
-
+1.查看历史日志 命令：git log
+2.返回特定版本 命令：git reset id。id为返回的特定版本号。
 
 #git reomote用法
 

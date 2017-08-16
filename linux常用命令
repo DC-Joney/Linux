@@ -96,3 +96,12 @@ iostat
 	：
 
 
+
+#创建文件
+
+touch {a...g}
+
+rz:
+
+dos2unix:
+    
