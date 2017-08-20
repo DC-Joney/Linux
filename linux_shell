@@ -1,0 +1,187 @@
+sed -n '30,31p'/etc/init.d/network
+
+文件测试表达式：
+
+    -f
+    
+vim /etc/init.d/rpcbind
+ [ -f "$file"]|| echo 0
+文件测试表达式:
+    [ $1 -eq 3 ]&&{
+        echo 1
+    }
+    [ $1 -eq 3 ]||{
+        echo 1
+    }
+
+整数表达式:
+    
+
+-ef
+    ln -s oldboy  test
+    [oldboy -ef test]&& echo 1
+    
+< >在 test表达式中 要转义 /<   />
+
+
+-ne 不等于
+
+
+-eq 确保两边是hi整数
+工作场景推荐用 [ -eq ]的写法
+
+
+双小括号可以用 (( $f1 > $f2 ))
+
+
+f1=/etc/rc.local;f2=/etc/services
+
+[ -f "$f1" -a -f "$f2" ] && echo 1|| echo 0
+
+a=1
+b=2
+[ $a -eq 2 -a $b -eq 2 ]&&echo 1 || echo 2
+[ $a -eq 1 -a ”$b“ -eq “2” ]&&echo 1 || echo 2
+
+
+#标准写法 nfs
+["$NFSD_MODULE" != "noload" -a -x /sbin/modprobe ]&&{
+        /sbin/modprobe nfsd
+        [ -n "$RDMA_PORT" ]&& /sbin/modprobe svcrdma
+    }
+    
+小结:
+    []中用 -a,-o,!
+    [[]]中用 &&，||，！
+    test用法和[]是一样的
+    多个[]之间以及多个[[]]之间,或者任意混合中间的逻辑操作符都是 && 或者 ||
+
+    
+$#表示传参的个数 
+
+
+
+[ "`echo "123abc"|sed -r 's#[^0-9]##g'`" = "123" ]&&echo 1 || echo 0
+
+#数字必须为整数
+[ "`echo "$1"|sed -r 's#[^0-9]##g'`" = "$1" ]||{
+    echo “”
+    exit 2
+}
+问题:
+    exit 1 2 0 6 分别代表什么？
+
+read -p "提示信息" num1 num2
+
+
+%s#$1#$a#g 将$1 改为 $a
+
+
+打印菜单:
+menu(){
+    cat <<END
+        1.aa
+        2.bb
+        3.exit
+    END
+    }
+    read num
+    
+    [ $num -eq 1]&&{
+        echo "start install a"
+        [ -x /server/a.sh ]|| exit 2
+        /bin/sh /server/a.sh
+        exit 0
+    }
+    [ $num -eq 2 ]&&{
+        echo "start install a"
+        [ -x /server/b.sh ]|| exit 2
+        /bin/sh /server/b.sh
+        exit 0
+    }
+    
+    [ $num -eq 3 ]&&{
+       echo "bye"
+        exit 0
+    }
+    echo "input error"
+    exit 1
+    运行完成之后 使用 echo $？
+    
+
+if [ -test ]
+    then 
+    echo "执行"
+
+fi
+
+if [ -test ];then 
+    echo "执行"
+
+fi
+ free -m |sed -n 3p|awk '{print $4}'
+
+ free -m |sed -n 3p| awk 'NR==3{print $NF}'
+
+ 
+ free -m |sed -n 3p|awk '{print $NF}'
+
+
+ netstat -lnt | grep 3306 |wc -l
+ netstat -lntup | greo mysql
+  netstat -lntup | greo mysql | wc -l
+
+  
+#监控web和db的
+    #!/bin/bash
+    
+process_mysql = `ss -lntup|grep mysql |wc -l`
+chars = "mysql process is $process_mysql is ok"
+for n in 3306 3307 3306
+do
+[ $process_mysql -lt 3]&&{
+/data/$n/mysql start
+}
+
+
+端口:
+
+netstat ss lsof 
+
+netstat -lntup | grep 330 |wc -l
+lsof -i :3306|grep mysql | wc -l
+
+远程: telnet/nmap/nc
+
+wget curl 
+header(http)
+
+
+
+echo -e "\n"|telnet www.baidu.com 80 | grep Connected
+
+cho -e "\n"|telnet www.baidu.com 80 | grep Connected | wc -l
+
+namp  www.baidu.com -p 80 |grep open | wc -l
+
+ps -ef | grep 3306 | wc -l
+ps -ef | grep mysql | wc -l
+
+httpd:
+
+2>dev/null
+
+curl -I http://www.baidu.com | head -1
+
+find /var/www/html/ -type f | xargs md5sum >/tmp/md5lis
+
+echo ddd > /var/html/c
+md5sum -c /tmp/md5list
+
+find /var/www/html/ -type f| wc -l
+保证上线之后文件不会被篡改
+
+bin sbin etc 目录监控
+
+
+
