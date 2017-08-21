@@ -305,7 +305,57 @@ curl:
     -o 输出对象的
     -w http状态吗k
     
-    
+#压缩   
+tar -czvf ***.tar.gz
+tar -xjvf ***.tar.bz2
+
+#解压缩
+tar -xzvf ***.tar.gz
+
+tar -xjvf ***.tar.bz2
+
+简介
+
+参数：
+
+-c  ：建立一个压缩档案的参数指令(create 的意思)；
+
+-x  ：解开一个压缩档案的参数指令！
+
+-t  ：查看 tarfile 里面的档案！
+
+特别注意，在参数的下达中， c/x/t 仅能存在一个！不可同时存在！
+
+因为不可能同时压缩与解压缩。
+
+-z  ：是否同时具有 gzip 的属性？亦即是否需要用 gzip 压缩？
+
+-j  ：是否同时具有 bzip2 的属性？亦即是否需要用 bzip2 压缩？
+
+-v  ：压缩的过程中显示档案！这个常用，但不建议用在背景执行过程！
+
+-f  ：使用档名，请留意，在 f 之后要立即接档名喔！不要再加参数！
+
+例如使用『 tar -zcvfP tfile sfile 』就是错误的写法，要写成
+
+『 tar -zcvPf tfile sfile 』才对喔！
+
+-p  ：使用原档案的原来属性（属性不会依据使用者而变）
+
+-P  ：可以使用绝对路径来压缩！
+
+-N  ：比后面接的日期(yyyy/mm/dd)还要新的才会被打包进新建的档案中！
+
+--exclude FILE：在压缩的过程中，不要将 FILE 打包！
+   
+   
+   
+   
+   
+   
+   
+   
+   
 sed：
 
     sed [options] [sed-commands] [input-file] 可以是文件也可以是标准输入
@@ -777,21 +827,7 @@ g命令是将当前保持空间中内容覆盖至模式空间，G命令是将当
 
 将ddd文件中数字和字母互换，并将字母大写
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
+
 cat ddd.sed
 h  
 {  
@@ -816,3 +852,124 @@ A\nThis is a and a is 1；执行s，重新排列，得出This is 1 and 1 is A；
 2-7、x命令
 
 x命令是将当前保持空间和模式空间内容互换
+
+
+
+sort 排序：
+    sort number
+    10.0.0.7
+    10.0.0.7
+    10.0.0.8
+    10.0.0.8
+    10.0.0.8
+    10.0.0.9
+    10.0.0.9
+    -u 排序然后去重 -u --unique
+    
+    -r --reverse倒叙排列
+    
+    -n 按照数字排序 默认是升序
+        :sort -nr number
+    
+    cut -d / -f3 number | sort -r | uniq -c | head -10
+    
+    -t 表示按点号分割域
+    
+    类似域awk的-F，取字段用$1 $2 或cut的-d 取数字段段 f数字 
+
+    
+    sort -t " " -k2 number1 排序字母 
+    
+    sort -t " " -rk2 number1 排序字母 倒叙
+    10.0.0.8 z
+    10.0.0.9 o
+    10.0.0.7 n
+    10.0.0.8 k
+    10.0.0.7 f
+    10.0.0.8 c
+    10.0.0.9 a
+默认按整行排序
+-t 指定分隔符 -k1 分隔符之后的第一列排序
+
+-k 1,1 用逗号来分割字段
+
+-k 1.1,3.3 用 
+    
+    sort -t. -k3.1,3.1nr -k4.1,4.3nr fileNAme
+    
+案例:
+    
+uniq：去重
+    uniq number
+    10.0.0.9
+    10.0.0.8
+    10.0.0.7
+    10.0.0.8
+    10.0.0.9
+    
+    
+    不加参数只对相邻的相同的参数去重
+    
+    sort number | uniq 利用排序去重
+    
+    -d:显示重复出现的行 2次和2次以上的行
+    
+    -u 仅显示 出现一次的行
+    -c 计数
+    
+去重统计:
+    sort number| uniq -c 
+
+案例:
+    awk -F / '{print $3}' oldboy.log|sort|uniq -c | sort -r
+
+    cut -d / -f3 number | sort -r | uniq -c
+    
+    
+awk数组:
+    awk 'BEGIN{array[1]="zy";array[2]="kl";for (key in array) print key ,array[key]}'
+    
+    
+    #!/usr/bin/awk
+    BEGIN{
+            array[1]="old";
+            array[2]="boy";
+            for(key in array)
+            print key,array[key];
+    }
+
+    
+    
+    awk -f t1.awk 
+    当 后边不接文件时要加BEGIN
+    
+    awk 'BEGIN{array[1]="zy";array[2]="kl";for (key in array);} END{rint key ,array[key]}'
+    一般有END时 需要接个文件
+    
+    cat /etc/profile | awk 'BEGIN{array[1]="zy";array[2]="kl"} END{for (key in array) print key,array[key];}' > t3.log
+
+    
+    awk -F " "'{S[$1]=$2} END {for (key in S) print key,S[key]}' t3.log
+    
+    这两个是一样的:
+        awk -F " " '{S[$1]=$2} END {for (key in S) print key,S[key]}' t3.log
+        
+    oldboy.log
+    http://www.etiantuan.org/index.html
+    http://www.etiantuan.org/1.html
+    http://post.etiantuan.org/index.html
+    http://mp3.etiantuan.org/index.html
+    http://www.etiantuan.org/3.html
+    http://post.etiantuan.org/2.html
+    
+    awk -F "/" '{S[$3]=S[$3]+1}END{for(k in S) print k,S[k]}' oldboy.log 
+
+     awk -F "/" '{S[$3]=S[$3]+1}END{for(k in S) print k,S[k]}' oldboy.log |sort -rn -k2 排序
+     
+      awk ''  
+
+      
+less:
+    
+    
+    
