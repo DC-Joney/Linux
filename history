@@ -1,0 +1,786 @@
+    1  ll
+    2  mv 下载 dowlands
+    3  ll
+    4  cd dowlands/
+    5  LL
+    6  ll
+    7  reboot
+    8  sudo apt-get remove nvidia*
+    9  export LANG=en_US
+   10  ll
+   11  sudo apt-get purge nvidia*
+   12  sudo apt-get -uninstall nvidia*
+   13  sudo apt-get --uninstall nvidia*
+   14  ll
+   15  sudo sh NVIDIA-Linux-x86_64-378.13.run -uninstall
+   16  ll
+   17  cd ../
+   18  ll
+   19  cd dcjoney/
+   20  ll
+   21  cd ??????
+   22  ll
+   23  export LANG=en_US
+   24  ll
+   25  cd dowlands/
+   26  ll
+   27  sudo vim /etc/modprobe.d/blacklist.conf 
+   28  lsmod | grep nouveau
+   29  reboot
+   30  export LANG=en_US
+   31  ll
+   32  lsmod | grep nouveau
+   33  sudo vim /etc/modprobe.d/blacklist.conf 
+   34  sudo vim /etc/modprobe.d/blacklist-nouveau.conf 
+   35  ls -la /etc/modprobe.d/
+   36  reboot
+   37  export LANG=en_US
+   38  ll
+   39  lsmod|grep nouveau
+   40  mv /lib/modules/4.8.0-36-generic/kernel/drivers/gpu/drm/nouveau//nouveau.ko /lib/modules/4.8.0-36-generic/kernel/drivers/gpu/drm/nouveau/nouveau.ko 
+   41  sudo mv /lib/modules/4.8.0-36-generic/kernel/drivers/gpu/drm/nouveau//nouveau.ko /lib/modules/4.8.0-36-generic/kernel/drivers/gpu/drm/nouveau/nouveau.ko 
+   42  sudo mv /lib/modules/4.8.0-36-generic/kernel/drivers/gpu/drm/nouveau/nouveau.ko /lib/modules/4.8.0-36-generic/kernel/drivers/gpu/drm/nouveau/nouveau.ko.org
+   43  reboot
+   44  vim unicode.sh
+   45  ll
+   46  chmod u+x unicode.sh 
+   47  ./unicode.sh 
+   48  ll
+   49  sudo ./unicode.sh 
+   50  ll
+   51  lsmod|grep nouveau
+   52  sudo mv /lib/modules/4.8.0-36-generic/kernel/drivers/gpu/drm/nouveau/nouveau.ko /lib/modules/4.8.0-36-generic/kernel/drivers/gpu/drm/nouveau/nouveau.ko.org
+   53  update-initramfs -u
+   54  sudo update-initramfs -u
+   55  reboot
+   56  export LANG=en_US
+   57  ll
+   58  lsmod|grep nouveau
+   59  sudo apt-get purge nvidia*
+   60  sudo service lightdm stop
+   61  cd dowlands/
+   62  ll
+   63  sudo sh NVIDIA-Linux-x86_64-375.66.run -no-x-check -no-nouveau-check -no-opengl-files 
+   64  sudo service lightdm start
+   65  sudo update-grub
+   66  reboot
+   67  sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.list.d/
+   68  wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
+   69  sudo apt-get update
+   70  sudo cp /etc/apt/source.list /etc/apt/source.list.backup
+   71  cd /etc/apt
+   72  ll
+   73  cd  apt.conf.d/
+   74  ll
+   75  cd ../
+   76  ll
+   77  sudo cp /etc/apt/source.list /etc/apt/source.list.backup
+   78  sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
+   79  sudo gedit /etc/apt/sources.list
+   80  ll
+   81  sudo gedit /etc/apt/sources.list
+   82  sudo apt-get update
+   83  vim /etc/hosts
+   84  sudo gedit /etc/hosts
+   85  sudo service network restart
+   86  sudo service networking restart
+   87  sudo apt-get install wine
+   88  tar -zxvf jdk-7u80-linux-x64.tar.gz 
+   89  mv jdk1.7.0_80/ /usr/
+   90  cd /su
+   91  cd /usr/
+   92  sudo mkdir opt
+   93  ll
+   94  mv ~/Downloads/jdk1.7.0_80/ ./
+   95  sudo mv ~/Downloads/jdk1.7.0_80/ opt/
+   96  ll
+   97  cd opt/
+   98  ll
+   99  cd jdk1.7.0_80/
+  100  ll
+  101  pwd
+  102  gedit /etc/profile
+  103  sudo gedit /etc/profile
+  104  source /etc/profile
+  105  java
+  106  sudo apt-get install wine
+  107  sudo add-apt-repository ppa:ubuntu-wine/ppa
+  108  sudo apt-get update
+  109  sudo apt-get install wine1.7
+  110  sudo apt-get install wine1.8
+  111  wine -version
+  112  wine
+  113  wine --version
+  114  cd /opt/
+  115  ll
+  116  cd /
+  117  l;l
+  118  ll\
+  119  ll
+  120  cd ~
+  121  ll
+  122  sudo chmod -R 777 QQ QQRecive/
+  123  ll
+  124  wine --help
+  125  wine -h
+  126  wine -help
+  127  cd  Dw
+  128  cd Downloads/
+  129  ll
+  130  sudo wine QQ_8.9.4.21584_setup.exe 
+  131  wine
+  132  wine QQ
+  133  wine QQ_8.9.4.21584_setup.exe 
+  134  wine QQ.exe 
+  135  wine -version
+  136  wine --version
+  137  wine QQ.EXE
+  138  cd /usr/share/applications
+  139  tar -zxvf CLion-2017.2.1.tar.gz 
+  140  ll
+  141  mv c
+  142  mv clion-2017.2.1/ /opt/
+  143  sudo mv clion-2017.2.1/ /opt/
+  144  ll
+  145  cd /opt/
+  146  ll
+  147  cd clion-2017.2.1/
+  148  ll
+  149  cd bin/
+  150  ./clion.sh 
+  151  sudo dpkg -i WineQQ7.8-20151109-Longene.deb
+  152  sudo kill -9 30905
+  153  sudo kill -9 23699
+  154  sudo kill -9 23290
+  155  sudo kill -9 31827
+  156  sudo kill -9 32675
+  157  ps -ef | grep qq
+  158  top
+  159  reboot
+  160  shutdown -r now
+  161  top
+  162  ll
+  163  lll
+  164  lll
+  165  ]]\
+  166  ]\\
+  167  ll
+  168  reboot
+  169  export LANG=en_US
+  170  ll
+  171  sudo apt-cache search nvidia*
+  172  sudo sh  NVIDIA-Linux-x86_64-375.82.run -uninstall
+  173  ll
+  174  find / -name nvidia*
+  175  nvidia-smi
+  176  reboot
+  177  lsmod | grep nouveau
+  178  export LANG=en_US
+  179  ll
+  180  sudo service lightdm stop
+  181  sudo sh NVIDIA-Linux-x86_64-375.82.run -no-x-check -no-nouveau-check -no-opengl-files
+  182  sudo servcie lightdm start
+  183  sudo service lightdm start
+  184  reboot
+  185  shutdown -h now
+  186  sudo shutdown -h now
+  187  ll
+  188  cls
+  189  clear
+  190  cd big_byte/
+  191  touch big_byte.c
+  192  touch big_byte.yh
+  193  touch big_byte.h
+  194  rm -rf big_byte.yh 
+  195  ll
+  196  pip3
+  197  pip
+  198  sudo apt install python3-pip
+  199  pip3 install pexpect
+  200  cd ../py/
+  201  chmod u+x log4j.py 
+  202  ./log4j.py 
+  203  ./log4j.py 111
+  204  chmod u+x test.py 
+  205  ./test.py  1 2 3
+  206  ./test.py 1 2 3
+  207  ./test.py
+  208  ./test.py 1
+  209  ./test.py 1 2 3
+  210  ./test.py 1
+  211  ./test.py h
+  212  ./test.py -h
+  213  ./test.py --h
+  214  ./test.py -h
+  215  ./test.py --help
+  216  ./test.py --222
+  217  ./test.py -v
+  218  ./test.py --version
+  219  ./test.py -v
+  220  ./test.py v
+  221  ./test.py -v
+  222  ./test.py -f
+  223  ./test.py -f=
+  224  ./test.py -f=name
+  225  ./test.py --filename=name
+  226  ./test.py -file=name
+  227  ./test.py -f=name
+  228  ./test.py -f name
+  229  cd ../big_byte/
+  230  gcc -o high_byte -c big_byte.c 
+  231  gcc -o high_byte  big_byte.c 
+  232  ./high_byte 
+  233  cd ../py/
+  234  ll
+  235  chmod u+x makecfile.py 
+  236  ./makecfile.py ../big_byte/big_byte.c 
+  237  shutdown -r now
+  238  cd py/
+  239  ./ma
+  240  ./main 
+  241  sh main
+  242  ./main 
+  243  bash main
+  244  main
+  245  sudo su main
+  246  sudo sh main
+  247  cd ../tcp/
+  248  touch tcp.h tcp.c
+  249  touch tcp_client.c
+  250  shutdwon -r now
+  251  sudo shutdwon -r now
+  252  sudo shutdown -r now
+  253  ll
+  254  shutdown -r now
+  255  cd ~
+  256  cd 文档
+  257  ll
+  258  cd svn/
+  259  ll
+  260  cd scdoc/
+  261  ll
+  262  mkdir aa
+  263  ll
+  264  svn add aa
+  265  svn co -m "111"
+  266  svn ci -m "111"
+  267  svn ci -m "111" --username
+  268  svn co svn://192.168.0.101/scdoc --username admin
+  269  ifconfig
+  270  svn co svn://192.168.0.101/scdoc --username admin
+  271  ll
+  272  pkill svnserve
+  273  sudo svnserve -d -r /application/svndata/
+  274  svn ll
+  275  ll
+  276  svn add aa
+  277  svn ci -m "1111"
+  278  svn list svn://192.168.0.101/scodc --verbose
+  279  svn list svn://192.168.0.101/scdoc
+  280  cd ..
+  281  ll
+  282  svn co svn://192.168.0.101/scdoc --username admin
+  283  ll
+  284  cd scdoc/
+  285  ll
+  286  cd a
+  287  rm -f aa
+  288  rm -rf aa
+  289  cd ..
+  290  svn co svn://192.168.0.101/scdoc --username admin
+  291  ll
+  292  cd scdoc/
+  293  ll
+  294  rmdir aa
+  295  cd ..
+  296  svn update co svn://192.168.0.101/scdoc --username admin
+  297  svn update  svn://192.168.0.101/scdoc --username admin
+  298  svn update 
+  299  cd scdoc/
+  300  ll
+  301  cd ..
+  302  ll
+  303  cd scdoc/
+  304  ll
+  305  svn update 
+  306  ll
+  307  svn delete aa
+  308  ll
+  309  svn ci -m "删除文件aa"
+  310  ll
+  311  svn update 
+  312  ll
+  313  svn update
+  314  ll
+  315  cd db/
+  316  ll
+  317  cd ..
+  318  ll
+  319  cd ..
+  320  svn co svn://192.168.0.101/scdoc --username admin
+  321  ll
+  322  cd scdoc/
+  323  ll
+  324  svn co svn://192.168.0.101/scdoc/trunk --username admin
+  325  svn co svn://192.168.0.101/scdoc/trunk/ --username admin
+  326  ll
+  327  svn revert . --recursive
+  328  ll
+  329  svn revert . --recursive
+  330  ll
+  331  svn log
+  332  svn merge -r 3:2
+  333  svn merge -r 3:2 .
+  334  ll
+  335  svn update
+  336  ll
+  337  cd ~
+  338  ll
+  339  rz
+  340  cd 文档
+  341  ll
+  342  git pull
+  343  cd .git/
+  344  ll
+  345  cat config 
+  346  cd ..
+  347  ll
+  348  git clone https://github.com/DC-Joney/Linux.git
+  349  ll
+  350  cd Linux/
+  351  ll
+  352  rz
+  353  dos2unix
+  354  ll
+  355  git add git创建仓库 linux常用命令 svn版本库管理 
+  356  git add git创建仓库 linux常用命令 svn版本库管理  svn钩子脚本.png svn钩子脚本应用实例.png svn非常用钩子脚本.png
+  357  git commit -m "08-17"
+  358  git push -u origin master
+  359  xargs 
+  360  ps -ef | grep qq
+  361  pkill qq
+  362  ps -ef | grep qq
+  363  kill -9 6249
+  364  ps -ef | grep qq
+  365  kill -9 22622
+  366  ps -ef | grep qq
+  367  qq
+  368  ps -ef | grep qq
+  369  rz
+  370  sudo apt-get install lrzsz
+  371  ls /dev/sda*
+  372  ls -ld /bin/
+  373  ls -ld /bin/lib
+  374  ls -ld /bin/ /sbin/ /lib/ /tmp/
+  375  ll
+  376  sz
+  377  rz
+  378  sz
+  379  ll
+  380  ps -ef | grep sshd
+  381  hostname
+  382  ifconfig
+  383  ssh
+  384  ps -ef | grep sshd
+  385  sudo apt-get install openssh
+  386  sudo apt-get install openssl
+  387  ps -ef | grep sshd
+  388  sudo apt-get install openssh-server
+  389  runlevel
+  390  shutdown -r now
+  391  cd ..
+  392  ll
+  393  kate
+  394  ,ll
+  395  ps -ef | grep subserve
+  396  ps -ef | grep svnserve
+  397  svnserve -d -r /application/svndata/
+  398  cd /application/svndata/
+  399  l
+  400  ll
+  401  cd scdoc/
+  402  ll
+  403  cd conf/
+  404  ll
+  405  vim svnserve.conf
+  406  ll
+  407  cd /application/
+  408  cd svnpasswd/
+  409  ll
+  410  gedit authz 
+  411  sudo gedit authz 
+  412  cd /application/svndata/
+  413  ll
+  414  cd scdoc/
+  415  ll
+  416  cd ..
+  417  l
+  418  ll
+  419  cd scdoc/
+  420  ll
+  421  cd db/
+  422  ll
+  423  cd ../
+  424  ll
+  425  sudo find /application/svndata/ -name "aa"
+  426  ll
+  427  sudo find /application/svndata/ -name "aa"
+  428  sudo find /application/svndata/ -nameaa
+  429  sudo find /application/svndata/ -name aa
+  430  sudo make -p /svn/{trunk,branch,tag}
+  431  sudo mkdir -p /svn/{trunk,branch,tag}
+  432  ll /svn
+  433  svn import file:///application/svndata/dcjoney -m "import"
+  434  svn import /svn file://a/svndata/dcjoney -m "import"
+  435  svn import file:///application/svndata/scdoc -m "import"
+  436  sudo svn import file:///application/svndata/scdoc -m "import"
+  437  cd /svn/
+  438  ll
+  439  svn revert --recursive
+  440  sudo svn import /svn file:///application/svndata/scdoc -m "import"
+  441  ll
+  442  svn copy svn://192.168.0.101/scdoc/trunk svn://192.168.0.101/scdoc/branch/branch_cms_1 -m "创建了一个分支从主干上" --username admin
+  443  cd /application/svndata/scdoc/hooks/
+  444  ll
+  445  tree /application/svndata/
+  446  tree .
+  447  sudo mkdir /data/www
+  448  sudo mkdir -p  /data/www
+  449  cd /data/www
+  450  ll
+  451  svn co svn://192.168.0.101/scdoc --username admin
+  452  sudo svn co svn://192.168.0.101/scdoc --username admin
+  453  ll
+  454  cd scdoc/
+  455  ll
+  456  cd branch/
+  457  ll
+  458  cd branch_cms_1/
+  459  ll
+  460  cd ..
+  461  ll
+  462  cd -
+  463  cd /application/svndata/scdoc/hooks/
+  464  ll
+  465  cp post-commit.tmpl post-commit
+  466  sudo cp post-commit.tmpl post-commit
+  467  ll
+  468  more post-commit
+  469  ll
+  470  cd /opt/
+  471  ll
+  472  exit
+  473  find . -name CentOS*
+  474  pwd
+  475  find /media/dcjoney/Elements -name CentOS*
+  476  find /media/dcjoney/Elements -name *.iso
+  477  ifconfig
+  478  ping 192.168.0.105
+  479  ping 192.168.0.107
+  480  cd `
+  481  cd ～
+  482  cd ~
+  483  ll
+  484  ping 192.168.0.107
+  485  ssh root@192.168.0.107
+  486  cd 文档
+  487  cd li
+  488  cd Linux/
+  489  LL
+  490  ll
+  491  cd linux重要子文件/
+  492  ll
+  493  man test
+  494  ll
+  495  ssh dcjoney@192.168.0.105
+  496  setup
+  497  blk
+  498  blkid
+  499  blkid /dev/sda1
+  500  dmesg
+  501  ifconfig 
+  502  ifconfig enp3s0 | awk 'NR==2'
+  503  ifconfig enp3s0 | awk 'NR==2 {print $3 }'|awk -F ":" '${print $2}'
+  504  ifconfig enp3s0 | awk 'NR==2 {print $3 }'
+  505  ifconfig enp3s0 | awk 'NR==2 {print $3 }' | awk -F ":" 'print $2'
+  506  ifconfig enp3s0 | awk 'NR==2 {print $3 }' | awk -F ":" 'print $1'
+  507  ifconfig enp3s0 | awk 'NR==2 {print $3 }' | awk -F ':' 'print $1'
+  508  ifconfig enp3s0 | awk 'NR==2 {print $3 }' | awk -F ":" 'print $1'
+  509  calc
+  510  1+2
+  511  1+2=
+  512  wc 1+2
+  513  wc
+  514  bc
+  515  cat /etc/shells 
+  516  test="oldboy"
+  517  [ -n $test ]&& echo hello ||echo 0
+  518  [ $test = "oldboy" ]&& echo hello ||echo 0
+  519  [ $test="oldboy" ]&& echo hello ||echo 0
+  520  sudo apt-get install nfs-utils 
+  521  sudo apt-get install yum
+  522  sudo yum install nfs-utils -y
+  523  sudo apt-get install nfs-utils
+  524  ping 192.168.0.105
+  525  ssh dcjoney@192.168.0.105
+  526  ll
+  527  ssh root@192.168.0.107
+  528  ping 192.168.0.107
+  529  ssh root@192.168.0.107
+  530  sed -r 's#(.*)#--&--#g' person
+  531  sed -r 's#(.*)#--&--#g' test/person 
+  532  sed  's#(.*)#--&--#g' test/person 
+  533  sed -r 's#(.*)#--&--#g' test/person 
+  534  sed -r 's#(.*),(.*),(.*)#--&-\1==\2==\3#g' pe
+  535  sed -r 's#(.*),(.*),(.*)#--&-\1==\2==\3#g' test/person 
+  536  shutdown -r now
+  537  cd /
+  538  ll
+  539  prel
+  540  apt-get install prel
+  541  sudo apt-get install prel
+  542  pcre
+  543  perl --version
+  544  perl
+  545  cd /
+  546  lll
+  547  cd /home/
+  548  cd dcjoney/
+  549  ll
+  550  mkdir tools
+  551  cd tools/
+  552  ll
+  553  wget -q http://nginx.org/download/nginx-1.10.3.tar.gz
+  554  ll
+  555  tar -zxvf nginx-1.10.3.tar.gz 
+  556  ls -h nginx-1.10.3
+  557  ls -lh nginx-1.10.3
+  558  ll
+  559  ls -l
+  560  ll
+  561  ls -lh
+  562  cd nginx-1.10.3/
+  563  ll
+  564  ./configure --help 
+  565  ./configure --user=www --group=www --with-http_ssl_module --with-http_stub_status_module --prefix=/application/nginx-1.10.3
+  566  sudo apt-get install libpcre3 libpcre3-dev 
+  567  sudo apt-get install zlib1g-dev 
+  568  ./configure --user=www --group=www --with-http_ssl_module --with-http_stub_status_module --prefix=/application/nginx-1.10.3
+  569  sudo apt-get install openssl libssl-dev  
+  570  ./configure --user=www --group=www --with-http_ssl_module --with-http_stub_status_module --prefix=/application/nginx-1.10.3
+  571  useradd www -s /sbin/nologin -M
+  572  sudo useradd www -s /sbin/nologin -M
+  573  echo $?
+  574  ll\
+  575  ll
+  576  make && make install
+  577  sudo make && make install~
+  578  sudo make && make install
+  579  make
+  580  cd auto/
+  581  cd /application/
+  582  ll
+  583  cd ../
+  584  ll
+  585  sudo ./configure --user=www --group=www --with-http_ssl_module --with-http_stub_status_module --prefix=/application/nginx-1.10.3
+  586  sudo sh configure --user=www --group=www --with-http_ssl_module --with-http_stub_status_module --prefix=/application/nginx-1.10.3
+  587  ./configure --user=www --group=www --with-http_ssl_module --with-http_stub_status_module --prefix=/application/nginx-1.10.3
+  588  sudo chmod +x,+r,+w /application/
+  589  ls -l /application/
+  590  cd -
+  591  cd /home/dcjoney/tools/nginx-1.10.3/
+  592  make && make install
+  593  sudo chmod g+x,g+r,g+w /application/
+  594  make && make install
+  595  sudo chmod o+x,o+r,o+w /application/
+  596  make && make install
+  597  nginx
+  598  sudo ln /application/nginx-1.10.3/ /application/nginx
+  599  sudo ln -s  /application/nginx-1.10.3/ /application/nginx
+  600  ls -l /application/
+  601  /application/nginx/sbin/nginx 
+  602  sudo /application/nginx/sbin/nginx 
+  603  netstat -lntup | grep 80
+  604  ifconfig  enth0
+  605  ifconfig
+  606  ifconfig enpes0
+  607  ifconfig enp3s0
+  608  killall nginx 
+  609  sudo killall nginx 
+  610  /application/nginx/sbin/nginx -t
+  611  sudo /application/nginx/sbin/nginx -t
+  612  cd /application/
+  613  ll
+  614  cd nginx
+  615  ll
+  616  cd conf/
+  617  ll
+  618  ../sbin/nginx -V
+  619  cat ../logs/error.log 
+  620  cd ng
+  621  cd ../
+  622  ll
+  623  cd html/
+  624  ll
+  625  cd ../../
+  626  tree nginx
+  627  cd /cdrom/
+  628  cd /application/nginx/conf/
+  629  ll
+  630  diff nginx.conf nginx.conf.default 
+  631  gedit  nginx.conf
+  632  egrep -v "^$|#" nginx.conf.default >nginx.conf
+  633  gedit  nginx.conf
+  634  cd ../
+  635  ll
+  636  cd ~
+  637  cd 下载
+  638  cd Downloads/
+  639  ll
+  640  ls -la P
+  641  ls -la P*
+  642  ls -la p*
+  643  tar -zxvf pycharm-professional-2017.2.1.tar.gz 
+  644  mv pycharm-2017.2/ /opt/
+  645  tree /opt/
+  646  tree -f /opt/
+  647  tree -1 /opt/
+  648  tree 1 /opt/
+  649  tree  /opt/ 1
+  650  ls -la /opt/
+  651  sudo mv pycharm-2017.2/ /opt/
+  652  cd /opt/
+  653  cd pycharm-2017.2/
+  654  ./bin/pycharm.sh 
+  655  chmod -R 777 /application/
+  656  sudo chmod -R 777 /application/
+  657  cd ../
+  658  ll
+  659  cd ../
+  660  ls /opt/
+  661  ls -la /opt/
+  662  cd /application/
+  663  ll
+  664  mkdir -p /home/dcjoney/application && cp -r nginx-1.10.3/ /home/dcjoney/application/
+  665  cd ~/application/
+  666  ll
+  667  ps -lntup | grep 80
+  668  netstat -lntup | grep 80
+  669  netstat lntup | grep 80
+  670  netstat -lntup | grep 80
+  671  sudo netstat -lntup | grep 80
+  672  ll
+  673  ln -s nginx-1.10.3/ nginx
+  674  ll
+  675  cd nginx
+  676  ll
+  677  cd sbin/
+  678  ./nginx -V
+  679  ./nginx -t
+  680  rm -rf /home/dcjoney/application/* && ./configure --user=www --group=www --with-http_ssl_module --with-http_stub_status_module --prefix=/home/dcjoney/application/nginx-1.10.3
+  681  rm -rf /home/dcjoney/application/* &&cd /home/dcjoney/tools/nginx-1.10.3/ &&./configure --user=www --group=www --with-http_ssl_module --with-http_stub_status_module --prefix=/home/dcjoney/application/nginx-1.10.3
+  682  cd /home/dcjoney/application/
+  683  ll
+  684  cd ../
+  685  ls -la ng
+  686  ll
+  687  cd tools/nginx-1.10.3/
+  688  ll
+  689  cd ..
+  690  ll
+  691  cd nginx-1.10.3/
+  692* make && make inst
+  693  cd /application/nginx
+  694  ll
+  695  chmod g-x,g-r,g-w /application/
+  696  sudo chmod g-x,g-r,g-w /application/
+  697  ll
+  698  sudo chmod o-x,o-r,o-w /application/
+  699  ll
+  700  cd /home/dcjoney/application/
+  701  ll
+  702  cd nginx-1.10.3/
+  703  ll
+  704  cd conf/
+  705  ll
+  706  cd ..
+  707  ll
+  708  cd .
+  709  cd ..
+  710  ll
+  711  cd nginx-1.10.3/
+  712  ll
+  713  cd sbin/
+  714  ./nginx  start
+  715  ./nginx
+  716  useradd www -s /sbin/nologin -M
+  717  chown -R www:www /home/dcjoney/application/
+  718  sudo chown -R www:www /home/dcjoney/application/
+  719  ll
+  720  ./nginx 
+  721  cd ../
+  722  ll
+  723  cd logs/
+  724  ll
+  725  cd ../
+  726  ll
+  727  sudo chown -R www:www /home/dcjoney/application/*
+  728  ll
+  729  sudo chown -R www:www /home/dcjoney/application/{client_body_temp,conf,fastcgi_temp,html,logs,proxy_temp,sbin,scgi_temp,uwsgi_temp}
+  730  sudo chown -R www:www /home/dcjoney/application/nginx-1.10.3/{client_body_temp,conf,fastcgi_temp,html,logs,proxy_temp,sbin,scgi_temp,uwsgi_temp}
+  731  ll
+  732  ./sbin/nginx 
+  733  cd ../lo
+  734  cd logs/
+  735  ll
+  736  chmod o+w *
+  737  sudo chmod o+w *
+  738  ll
+  739  sudo chmod g+w *
+  740  ll
+  741  ../sbin/nginx 
+  742  ./sbin/nginx 
+  743  sudo www
+  744  su www
+  745  su - www
+  746  sudo ../sbin/nginx 
+  747  sudo killall nginx 
+  748  ll
+  749  cd ../conf/
+  750  egrep "^$|#" nginx.conf.default > nginx.conf
+  751  sudo egrep "^$|#" nginx.conf.default > nginx.conf
+  752  ll
+  753  sudo egrep "^$|#" nginx.conf.default > nginx.conf
+  754  egrep "^$|#" nginx.conf.default > nginx.conf
+  755  chmod 777 *
+  756  sudo chmod 777 *
+  757  ll
+  758  egrep "^$|#" nginx.conf.default > nginx.conf
+  759  ll
+  760  egrep -v "^$|#" nginx.conf.default > nginx.conf
+  761  cd ../
+  762  cd /home/dcjoney/application/
+  763  ll
+  764  rm -rf nginx-1.10.3/
+  765  sudo rm -rf nginx-1.10.3/
+  766  ll
+  767  cd /home/dcjoney/tools/nginx-1.10.3/ && ./configure --user=dcjoney --group=dcjoney --with-http_ssl_module --with-http_stub_status_module --prefix=/home/dcjoney/application/nginx-1.10.3
+  768  make && make install
+  769  history
+  770  useradd dcjoney -s /sbin/nologin -M
+  771  make && make install
+  772  sudo make && make install
+  773  cd /home/dcjoney/tools/nginx-1.10.3/ && ./configure --user=www --group=www --with-http_ssl_module --with-http_stub_status_module --prefix=/home/dcjoney/application/nginx-1.10.3
+  774  make && make install
+  775  cd /home/dcjoney/tools/nginx-1.10.3/ && ./configure --user=www --group=www --with-http_ssl_module --with-http_stub_status_module --prefix=/home/dcjoney/application/nginx-1.10.3
+  776  make && make install
+  777  chmod 777 /home/dcjoney/application/
+  778  sudo chmod 777 /home/dcjoney/application/
+  779  cd /home/dcjoney/tools/nginx-1.10.3/ && ./configure --user=www --group=www --with-http_ssl_module --with-http_stub_status_module --prefix=/home/dcjoney/application/nginx-1.10.3
+  780  make && make install
+  781  ll
+  782  cd ~/application/
+  783  ll
+  784  cd nginx-1.10.3/
+  785  ll
+  786  history  > ~/文档/Linux/history

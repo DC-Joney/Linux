@@ -972,4 +972,25 @@ awk数组:
 less:
     
     
+ifconfig： 查看网卡配置
+    ifconfig 网卡名称
     
+ip:
+    显示路由或者是配置路由
+
+wget：
+    -q 下载
+    
+    -O指定文件名下载
+    
+netsta:
+    -lntup 显示tcp网络列表
+    -a 显示所有网络列表
+
+lsof 
+    -i:端口号
+    
+curl:
+    -I常看相应header信息 -s -w获取状态码
+    
+LANG =EN  yum grouplist yum源列表 
