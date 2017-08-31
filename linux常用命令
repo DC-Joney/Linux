@@ -49,6 +49,7 @@ cd:
 	
 clear 清空当前终端 (Ctrl+L)
 
+fc-list :lang=zh -f 查看系统字体
  	
 ls:
 	-a 显示所有文件和子目录 以.开头的是隐藏文件

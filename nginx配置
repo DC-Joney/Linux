@@ -15,4 +15,8 @@ egrep -v "^$|#" nginx.conf.default >nginx.conf
 
 sudo ./nginx -s reload 平滑重启
 
+nginx/conf/mime.conf mime类型
+
+
+
 
